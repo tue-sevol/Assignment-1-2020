@@ -47,8 +47,8 @@ To run the project the following docker command will be used:
 `docker build -t 2imp25-assignment-1 .`
 
 This builds a docker image according to the `DockerFile`, and tags the built image as `2imp25-assignment-1`. 
-Finally, to run the docker image using the matcher that requires a similarity of at least .25 we execute the 
-following command.
+For example to run the docker image using the matcher that requires a similarity of at least .25 (match type: 1) we 
+execute the following command.
 
 Windows (Powershell): `docker run --rm -v "$pwd\dataset-1:/input" -v "$pwd\output:/output" 2imp25-assignment-1 1`
 
@@ -57,7 +57,8 @@ Linux: `docker run --rm -v "$PWD/dataset-1:/input" -v "$PWD/output:/output" 2imp
 The command runs the previously built container. The `-v` commands mounts two directories ([Volumes](https://docs.docker.com/storage/volumes/)) on the host
 file system in the container. One `$PWD/dataset-1:/input` maps the host directory `./dataset-1` to the 
 container folder `./input`, and the second one maps the host directory `./output` to container directory
-`/output`. 
+`/output`. `2imp25-assignment-1` is the name of the tag that was given during the build step, and the 
+final argument `1` is the match type that should be used by the trace link finder. 
 
 By providing a different host directory for the input mount a different dataset can be provided to the 
 program. e.g. this repository provides two datasets, `dataset-1` and `dataset-2`. However, when grading
