@@ -47,11 +47,12 @@ To run the project the following docker command will be used:
 `docker build -t 2imp25-assignment-1 .`
 
 This builds a docker image according to the `DockerFile`, and tags the built image as `2imp25-assignment-1`. 
-Finally, to run the docker image we execute the following command.
+Finally, to run the docker image using the matcher that requires a similarity of at least .25 we execute the 
+following command.
 
-Windows (Powershell): `docker run --rm -v "$pwd\dataset-1:/input" -v "$pwd\output:/output" 2imp25-assignment-1`
+Windows (Powershell): `docker run --rm -v "$pwd\dataset-1:/input" -v "$pwd\output:/output" 2imp25-assignment-1 1`
 
-Linux: `docker run --rm -v "$PWD/dataset-1:/input" -v "$PWD/output:/output" 2imp25-assignment-1`
+Linux: `docker run --rm -v "$PWD/dataset-1:/input" -v "$PWD/output:/output" 2imp25-assignment-1 1`
 
 The command runs the previously built container. The `-v` commands mounts two directories ([Volumes](https://docs.docker.com/storage/volumes/)) on the host
 file system in the container. One `$PWD/dataset-1:/input` maps the host directory `./dataset-1` to the 
