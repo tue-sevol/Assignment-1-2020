@@ -44,9 +44,10 @@ should be an entry in `links.csv` for that **high** level requirement with an em
 
 To run the project the following docker command will be used: 
 
-`docker build -t 2imp25-assignment-1 .`
+`docker build -t 2imp25-assignment-1 ./`
 
 This builds a docker image according to the `DockerFile`, and tags the built image as `2imp25-assignment-1`. 
+
 For example to run the docker image using the matcher that requires a similarity of at least .25 (match type: 1) we 
 execute the following command.
 
