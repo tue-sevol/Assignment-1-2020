@@ -6,10 +6,10 @@ import sys
 
 
 def write_output_file():
-'''
-Writes a dummy output file using the python csv writer, update this 
-to accept as parameter the found trace links. 
-'''
+    '''
+    Writes a dummy output file using the python csv writer, update this 
+    to accept as parameter the found trace links. 
+    '''
     with open('/output/links.csv', 'w') as csvfile:
 
         writer = csv.writer(csvfile, delimiter=",", quotechar="\"", quoting=csv.QUOTE_MINIMAL)
@@ -24,9 +24,9 @@ to accept as parameter the found trace links.
 
 
 if __name__ == "__main__":
-'''
-Entry point for the script
-'''
+    '''
+    Entry point for the script
+    '''
     if len(sys.argv) < 2:
         print("Please provide an argument to indicate which matcher should be used")
         exit(1)
