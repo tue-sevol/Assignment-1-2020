@@ -1,6 +1,6 @@
 # Introduction
 
-This repository serves as an example starting point for the first assignment of Software Evolution 2019-2020.
+This repository serves as an example starting point for the first assignment of Software Evolution 2020-2021.
 Inside is a DockerFile and example Python script that reads input from a directory `/input`, and that writes 
 output to `/output/links.csv` containing the identified trace links. 
 
